@@ -5,28 +5,34 @@ In this example, the client sends 2 matrices to the server, which calculates the
 ## Steps to run the project
 
 ### Clone the repository
-`git clone https://github.com/M4R14X/RMI-Practical-Example.git`
-
+```bash
+git clone https://github.com/M4R14X/RMI-Practical-Example.git
+```
 ### Ensure Classes Are Compiled
 Open the Command Prompt.
 Navigate to the project folder and run:
-`javac -d build src/shared/*.java src/server/*.java src/client/*.java`
-
+```bash
+javac -d build src/shared/*.java src/server/*.java src/client/*.java
+```
 ### Start the RMI Registry
 Open the Command Prompt.
 Navigate to the project folder and run:
-`start rmiregistry`
+```bash
+start rmiregistry
+```
 **If an error occurs** stating that the command was not found, check the **Troubleshooting** section of this **README**.
 
 ### Run the Server
 Open the Command Prompt.
 Navigate to the project's folder and run:
-`java -cp build server.RMIServer`
-
+```bash
+java -cp build server.RMIServer
+```
 ### Run the RMI client
 In another Command Prompt, navigate to the project folder and run:
-`java -cp build client.RMIClient`
-
+```bash
+java -cp build client.RMIClient
+```
 ## Troubleshooting
 
 ### Verify JDK Installation
