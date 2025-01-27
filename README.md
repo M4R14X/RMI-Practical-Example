@@ -5,24 +5,32 @@ In this example, the client sends 2 matrices to the server, which calculates the
 ## Steps to run the project
 
 ### Clone the repository
-git clone https://github.com/M4R14X/RMI-Practical-Example.git
+`git clone https://github.com/M4R14X/RMI-Practical-Example.git`
+
+### Ensure Classes Are Compiled
+Open the Command Prompt.
+Navigate to the project folder and run:
+`javac -d build src/shared/*.java src/server/*.java src/client/*.java`
 
 ### Start the RMI Registry
 Open the Command Prompt.
 Navigate to the project folder and run:
-start rmiregistry
+`start rmiregistry`
 **If an error occurs** stating that the command was not found, check the **Troubleshooting** section of this **README**.
 
 ### Run the Server
-java src.server.RMIServer
+Open the Command Prompt.
+Navigate to the project's folder and run:
+`java -cp build server.RMIServer`
 
 ### Run the RMI client
-java src.client.RMIClient
+In another Command Prompt, navigate to the project folder and run:
+`java -cp build client.RMIClient`
 
 ## Troubleshooting
 
 ### Verify JDK Installation
-java -version
+`java -version`
 
 ### Locate rmiregistry
 Find the location of the rmiregistry executable:
@@ -45,11 +53,11 @@ Click **OK** to save.
 #### 3. Verify Setup:
 Close and reopen the **Command Prompt**.
 Run:
-rmiregistry
+`rmiregistry`
 If it runs without error, the setup is complete.
 
 #### 4. Check if it's running
 Open the Command Prompt and run:
-netstat -a | findstr 1099
+`netstat -a | findstr 1099`
 If you see output like **LISTENING**, it means the **rmiregistry** is running on the default RMI port (1099).
 If it’s running, you can proceed to start your RMI server :)
