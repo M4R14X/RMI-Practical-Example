@@ -36,8 +36,9 @@ java -cp build client.RMIClient
 ## Troubleshooting
 
 ### Verify JDK Installation
-`java -version`
-
+```bash
+java -version
+```
 ### Locate rmiregistry
 Find the location of the rmiregistry executable:
 1. Open the folder where the JDK is installed (e.g., **C:\Program Files\Java\jdk-<version>**).
@@ -59,11 +60,15 @@ Click **OK** to save.
 #### 3. Verify Setup:
 Close and reopen the **Command Prompt**.
 Run:
-`rmiregistry`
+```bash
+rmiregistry
+```
 If it runs without error, the setup is complete.
 
 #### 4. Check if it's running
 Open the Command Prompt and run:
-`netstat -a | findstr 1099`
+```bash
+netstat -a | findstr 1099
+```
 If you see output like **LISTENING**, it means the **rmiregistry** is running on the default RMI port (1099).
 If it’s running, you can proceed to start your RMI server :)
